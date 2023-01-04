@@ -26,9 +26,9 @@
 				// ));
 			?>
 			<ul class="head-menu">
-				<li><a href=<?php echo esc_url(home_url('/product01')) ?>><p>ホーム</p><pre>HOME</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product02')) ?>><p>メニュー01</p><pre>MENU01</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product03')) ?>><p>メニュー02</p><pre>MENU02</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product04')) ?>><p>メニュー03</p><pre>MENU03</pre></a></li>
+				<li><a href=<?php echo esc_url(home_url('/')) ?>><p>ホーム</p><pre>HOME</pre></a></li>
+				<li><a href=<?php echo esc_url(home_url('/product01')) ?>><p>課題01</p><pre>SUBJECT01</pre></a></li>
+				<li><a href=<?php echo esc_url(home_url('/product02')) ?>><p>課題02</p><pre>SUBJECT02</pre></a></li>
+				<li><a href=<?php echo esc_url(home_url('/product03')) ?>><p>課題03</p><pre>SUBJECT03</pre></a></li>
 			</ul>
 		</header>
