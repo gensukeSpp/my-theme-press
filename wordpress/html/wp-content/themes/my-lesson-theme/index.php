@@ -3,7 +3,9 @@
 ・TOPページに載せるコンテンツの一部は下層ページから引用したい場合は、
 have_posts()やget_posts()
 を使用し該当投稿の情報が引用できるよう記述しましょう。
-    <h3><a href=<?php the_permalink(); ?>>
+    <article <?php ppost_class(); ?>>
+        <h3><a href=<?php the_permalink(); ?>>
         <?php the_title(); ?><a></h3>
-    <div><?php the_expert(); ?></div>
+        <div><?php the_expert(); ?></div>
+    </article>
 <?php get_footer(); ?>

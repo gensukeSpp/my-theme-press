@@ -13,7 +13,7 @@
             array(),
             '1.0',
             'all'
-        )
+        );
     }
     add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
     // ヘッダーナビゲーション用
