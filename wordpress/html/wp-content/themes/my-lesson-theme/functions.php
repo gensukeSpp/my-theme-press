@@ -18,4 +18,18 @@
     add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
     // ヘッダーナビゲーション用
     register_nav_menu('header-navi', 'ヘッダーナビゲーション');
+
+    function custom_widget_register(){
+        register_sidebar ( array(
+            'name'  => 'サイドバーウィジェットエリア',
+            'id'    => 'sidebar-widget',
+            'description'   => '',
+            'before_widget' => '<div id="%1s" class="c-widget %2s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="c-widget__title">',
+            'after_title'   => '</h2>'
+        ) );
+    }
+    add_action('widgets_init', 'custom_widget_register');
+
 ?>

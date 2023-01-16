@@ -8,5 +8,5 @@ have_posts()やget_posts()
         <?php the_title(); ?><a></h3>
         <div><?php the_expert(); ?></div>
     </article>
-    <?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
