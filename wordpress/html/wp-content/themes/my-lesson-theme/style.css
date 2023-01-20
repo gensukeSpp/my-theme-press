@@ -1,495 +1,122 @@
-@charset "utf-8";
-
-:root{
-    --belt-color: rgb(102, 103, 103);
-    --item-center: 0 auto;
-}
-
-h1 {
-    display: none;
-}
-#container {
-    display: block;
-    width: 100%;
-}
-#container .head-bar {
-    height: 30px;
-    background-color: var(--belt-color);
-    box-shadow: 0 0 3px 3px rgb(0, 0, 0, .8);
-        /* box-shadowが効かない場合 */
-    position: relative;
-}
-.head-bar div {
-    width: 960px;
-    font-family: 'メイリオ';
-    font-size: 11px;
-    color: white;
-    margin: var(--item-center); /* if position: absolute->！効かない */
-    position: relative;
-    top: 25%;
-    /* transform: translate(0, -50%) */
-}
-
+/*
+Theme Name: サンプルテーマ
+*/
+/* この下に通常のcssを書いていく */
 header {
     width: inherit;
-    background-image: url(../img/h_bg02.png);
+    background-image: url(./img/h_bg02.png);
 }
-header #head-item {
+header {
     width: 960px;
     /* width: inherit; */
     height: 125px;
     margin: var(--item-center);
 }
-header #head-item .head-logo {
+header .head-logo {
     width: 200px;
     height: 70px;
     margin-top: 28px;
-    background-image: url("../img/logo.jpg");
+    background-image: url(./img/logo.jpg);
     float: left;
 }
 
-.hamburger {
-    position: absolute;
-    right: 15px;
-    top: 7px;
-    background: var(--belt-color);
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-}  
-/*ボタン内側*/
-.hamburger span {
-    display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-    background: #fff;
-    width: 45%;
-} 
-.hamburger span:nth-of-type(1) {
-    top:15px; 
-}
-.hamburger span:nth-of-type(2) {
-    top:23px;
-}
-.hamburger span:nth-of-type(3) {
-    top:31px;
-}
-/*activeクラスが付与されると線が回転して×に*/  
-.hamburger.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-}    
-.hamburger.active span:nth-of-type(2) {
-    opacity: 0;/*真ん中の線は透過*/
-}
-.hamburger.active span:nth-of-type(3) {
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-}
-
-header nav#above-menu {
+header ul.head-menu {
     width: 70%;
     height: 50px;
     float: right; 
     margin-top: 38px;   
 }
-header nav#above-menu::after {
+header ul.head-menu::after {
     content: "";
     display: block;
     clear: both;
 }
-/* nav#above-menu ul {
+/* ul.head-menu {
     width: 69%;
 } */
-nav#above-menu ul li {
+ul.head-menu li {
     display: inline-block;
     border-left: 1px solid;
     width: 24%;
     height: 50px;
 }
-nav#above-menu ul li:nth-child(4) {
+ul.head-menu li:nth-child(4) {
     border-right: 1px solid;
 }
-nav#above-menu ul li a {
+ul.head-menu li a {
     position: relative;
     bottom: 20px;
     text-decoration: none;
     color: black;
 }
-nav#above-menu ul li a::before {
+ul.head-menu li a::before {
     top: 30px;
 }
-nav#above-menu ul li:hover {
+ul.head-menu li:hover {
     background-color: grey;
     opacity: .7;
 }
-nav#above-menu ul li:nth-child(1) a::before {
-    content: url(../img/icon01.png);
+ul.head-menu li:nth-child(1) a::before {
+    content: url(./img/icon01.png);
     position: relative;
     left: 47px;
 }
-nav#above-menu ul li:nth-child(2) a::before {
-    content: url(../img/icon02.png);
+ul.head-menu li:nth-child(2) a::before {
+    content: url(./img/icon02.png);
     position: relative;
     left: 32px
 }
-nav#above-menu ul li:nth-child(3) a::before {
-    content: url(../img/icon03.png);
+ul.head-menu li:nth-child(3) a::before {
+    content: url(./img/icon03.png);
     position: relative;
     left: 30px;
 }
-nav#above-menu ul li:nth-child(4) a::before {
-    content: url(../img/icon04.png);
+ul.head-menu li:nth-child(4) a::before {
+    content: url(./img/icon04.png);
     position: relative;
     left: 32px;
 }
-nav#above-menu ul li a p {
+ul.head-menu li a p {
     font-family: 'メイリオ';
     font-size: 13px;
     position: relative;
     bottom: 5px;
 }
-nav#above-menu ul li:nth-child(1) a p {
+ul.head-menu li:nth-child(1) a p {
     left: 79px;
     width: calc(100% - 79px);
 }
-nav#above-menu ul li:nth-child(2) a p {
+ul.head-menu li:nth-child(2) a p {
     left: 65px;
     width: calc(100% - 65px);
 }
-nav#above-menu ul li:nth-child(3) a p {
+ul.head-menu li:nth-child(3) a p {
     left: 63px;
     width: calc(100% - 63px);
 }
-nav#above-menu ul li:nth-child(4) a p {
+ul.head-menu li:nth-child(4) a p {
     left: 63px;
     width: calc(100% - 63px);
 }
-nav#above-menu ul li a pre {
+ul.head-menu li a pre {
     font-family: 'メイリオ';
     font-size: 11px;
     position: relative;
     bottom: 11px;
 }
-nav#above-menu ul li:nth-child(1) a pre {
+ul.head-menu li:nth-child(1) a pre {
     left: 82px;
     width: calc(100% - 82px);
 }
-nav#above-menu ul li:nth-child(2) a pre {
+ul.head-menu li:nth-child(2) a pre {
     left: 78px;
     width: calc(100% - 78px);
 }
-nav#above-menu ul li:nth-child(3) a pre {
+ul.head-menu li:nth-child(3) a pre {
     left: 76px;
     width: calc(100% - 76px);
 }
-nav#above-menu ul li:nth-child(4) a pre {
+ul.head-menu li:nth-child(4) a pre {
     left: 76px;
     width: calc(100% - 76px);
-}
-
-header .head-slide {
-    width: inherit;
-    background-color: rgb(49, 51, 51);
-}
-header .head-slide .top-slide {
-    max-width: 960px;
-    height: 350px;
-    /* background-color: var(--belt-color);
-    font-family: 'メイリオ';
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    line-height: 350px; */
-    margin: var(--item-center);
-    background-image: url(../img/main.jpg);
-}
-
-
-main {
-    max-width: 960px;
-    margin: var(--item-center);
-}
-main::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-main aside {
-    float: left;
-    /* 960:305=768:x x=244 768:100=221:y */
-    width: min(32vw, 305px);
-    margin-top: 25px;
-}
-/* main aside::after {
-    content: "";
-    display: block;
-    clear: both;
-} */
-main aside ul#side-menu {
-    height: 249px;
-    /* border: 1px solid; */
-    box-shadow: 0 0 2px 2px rgb(204, 204, 204);
-}
-aside ul#side-menu li {
-    height: 49px;
-}
-aside ul#side-menu li:hover {
-    background-color: gray;
-    opacity: .7;
-}
-aside ul#side-menu li:not(:last-child) {
-    border-bottom: 1px solid rgb(204, 204, 204);
-}
-aside ul#side-menu li a {
-    text-decoration: none;
-    color: black;    
-}
-aside ul#side-menu li a p {
-    font-family: 'メイリオ';
-    font-size: 14px;
-    line-height: 49px;
-    padding-left: 17px;
-}
-/* aside a .side-banner {
-    width: 304px;
-    height: 78px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: var(--belt-color);
-} */
-main aside a img {
-    width: 304px;
-    height: 78px;
-    /* background-image: url(../img/bn01.png); */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-aside ul#square-banner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* width: 305px; */
-    width: inherit;
-    height: 305px;
-    background-color: rgb(235, 235, 235);
-    padding: 5px;
-    box-sizing: border-box;
-    box-shadow: 0 0 2px 2px rgb(204, 204, 204);
-}
-ul#square-banner li {
-    width: 137px;
-    height: 137px;
-    margin: 5px;
-}
-ul#square-banner li a img {
-    height: 137px;
-    margin: initial;
-}
-/* ul#square-banner li:nth-child(1) a div {
-    background-image: url(../img/bn02.jpg);
-}
-ul#square-banner li:nth-child(2) a div {
-    background-image: url(../img/bn03.jpg);
-}
-ul#square-banner li:nth-child(3) a div {
-    background-image: url(../img/bn04.jpg);
-}
-ul#square-banner li:nth-child(4) a div {
-    background-image: url(../img/bn05.jpg);
-} */
-
-section {
-    /* 1200:631=768:x x=404 768:100=:y */
-    width: min(53vw, 631px);
-    margin-top: 25px;
-    float: right;
-}
-/* main section::after {
-    content: "";
-    display: block;
-    clear: both;
-} */
-section .sec-title {
-    font-family: 'メイリオ';
-    font-size: 20px;
-    color: white;
-    background-color: var(--belt-color);
-    line-height: 50px;
-    padding-left: 14px;
-}
-section article.text-area {
-    margin-bottom: 22px;
-    padding: 23px;
-    /* border: 1px solid; */
-    box-shadow: 0 0 2px 2px rgb(204, 204, 204);
-}
-article.text-area p.article-title {
-    font-family: 'メイリオ';
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-article.text-area p.article-title:nth-of-type(3) {
-    color: rgb(198, 26, 34);
-}
-article.text-area p.article-title:nth-of-type(5) {
-    color: rgb(0, 143, 59);
-}
-article.text-area p.article-text {
-    font-family: 'メイリオ';
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-main section a img {
-    /* height: 98px; */
-    margin-bottom: 22px;
-    /* background-color: var(--belt-color); */
-    /* background-image: url(../img/bn06.png); */
-}
-section article.flex-area {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 9px;
-    /* border: 1px solid; */
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    box-shadow: 0 0 2px 2px rgb(204, 204, 204);
-}
-article.flex-area div {
-    width: 184px;
-    margin: var(--item-center);
-    /* viewport1200px->26% */
-    padding-bottom: 38px;
-}
-article.flex-area div p.flex-title {
-    font-family: 'メイリオ';
-    /* font-size: 0.875em; */
-    font-size: 14px;
-    font-weight: bold;
-    border-bottom: 1px solid;
-    line-height: 32px; /* 高さ-margin */
-}
-p.flex-title::before {
-    content: url(../img/icon_star.png);
-    position: relative;
-    top: 4px;
-}
-article.flex-area div p.flex-text {
-    font-family: 'メイリオ';
-    /* font-size: 0.875em; */
-    font-size: 14px;
-    /* viewport1200px->10px */
-    margin-top: 7%;
-    /* viewport1200px->27px */
-    margin-right: 11%;
-}
-
-footer {
-    width: inherit;
-    height: 245px;
-    background-image: url(../img/h_bg02.png);
-}
-footer .foot-banner {
-    height: 125px;
-    display: flex;
-	/* align-items: center; */
-	justify-content: center;
-    padding: 24px;
-    box-sizing: border-box;
-}
-.foot-banner a img {
-    width: 798px;
-    height: 77px;
-    /* background-color: var(--belt-color); */
-    /* background-image: url(../img/bn07.png); */
-}
-footer nav#foot-menu {
-    height: 78px;
-    background-color: white;
-    box-shadow: 0 0 2px 2px rgb(0, 0, 0, .2);
-}
-nav#foot-menu ul {
-    height: inherit;
-    margin-left: 35%; /* 960-(1200-164*4)=416 */
-}
-nav#foot-menu ul li {
-    display: inline-block;
-    width: 24%;
-    height: inherit;
-}
-nav#foot-menu ul li:hover {
-    background-color: gray;
-    opacity: .7;
-}
-nav#foot-menu ul li a::before {
-    position: relative;
-    /* 微調整の末 */
-    top: 23px;
-}
-nav#foot-menu ul li a {
-    text-decoration: none;
-    color: black;
-}
-nav#foot-menu ul li:nth-child(1) a::before {
-    content: url(../img/icon01.png);
-    /* left: 47px; */
-}
-nav#foot-menu ul li:nth-child(2) a::before {
-    content: url(../img/icon02.png);
-    /* left: 32px */
-}
-nav#foot-menu ul li:nth-child(3) a::before {
-    content: url(../img/icon03.png);
-    /* left: 30px; */
-}
-nav#foot-menu ul li:nth-child(4) a::before {
-    content: url(../img/icon04.png);
-    /* left: 32px; */
-}
-nav#foot-menu ul li a p {
-    font-family: 'メイリオ';
-    font-size: 13px;
-    position: relative;
-    left: 35px;
-    bottom: 13px; /* (font-size)13 */
-    width: calc(100% - 35px);
-}
-nav#foot-menu ul li a pre {
-    font-family: 'メイリオ';
-    font-size: 11px;
-    position: relative;
-    bottom: 17px; /* pre高さ1個分 */
-}
-nav#foot-menu ul li:nth-child(1) a pre {
-    left: 38px;
-    width: calc(100% - 38px);
-}
-nav#foot-menu ul li:nth-child(2) a pre {
-    left: 47px;
-    width: calc(100% - 47px);
-}
-nav#foot-menu ul li:nth-child(3) a pre {
-    left: 48px;
-    width: calc(100% - 48px);
-}
-nav#foot-menu ul li:nth-child(4) a pre {
-    left: 48px;
-    width: calc(100% - 48px);
-}
-footer .copyright {
-    height: 40px;
-}
-footer .copyright p {
-    font-size: 12px;
-    text-align: center;
-    line-height: 40px;
 }

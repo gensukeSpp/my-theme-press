@@ -1,5 +1,5 @@
 		<footer>
-			<?php the_category( '&nbsp;' ); ?>
+			<?php //the_category( '&nbsp;' ); ?>
 			フッターです。
 		</footer>
 		<?php wp_footer(); ?>

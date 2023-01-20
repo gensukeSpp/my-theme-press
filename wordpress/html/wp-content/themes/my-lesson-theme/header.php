@@ -25,6 +25,7 @@
 				// 	'container_class' => 'head-menu',
 				// ));
 			?>
+			
 			<ul class="head-menu">
 				<li><a href=<?php echo esc_url(home_url('/')) ?>><p>ホーム</p><pre>HOME</pre></a></li>
 				<li><a href=<?php echo esc_url(home_url('/product01')) ?>><p>課題01</p><pre>SUBJECT01</pre></a></li>
