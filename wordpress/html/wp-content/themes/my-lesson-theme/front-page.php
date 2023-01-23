@@ -1,9 +1,10 @@
 <?php get_header(); ?>
-<?php   
-$categories = array('sweets', 'flower');
+<h2>サイドバーメニュー</h2>
+<?php  
+// $categories = get_categories(); 
+$categories = array('sweets', 'flower', 'onsen');
 foreach($categories as $cat){ ?>
     <section>
-        <h2>サイドバーメニュー</h2>
         <div class="<?php echo $cat; ?>">
             <?php
                 /*
@@ -16,7 +17,7 @@ foreach($categories as $cat){ ?>
                 $category_link = get_category_link( $cat_obj -> cat_ID );
             ?>
             <!-- このカテゴリーへのリンクを出力 -->
-            <a href="<?php echo esc_url( $category_link ); ?>"></a>
+            <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $cat_obj -> name ?></a>
         </div>
         <?php
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

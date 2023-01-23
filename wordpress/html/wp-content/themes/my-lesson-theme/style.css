@@ -1,7 +1,24 @@
+@charset "utf-8";
 /*
-Theme Name: サンプルテーマ
-*/
+Theme Name: my-lesson-theme
+Description:テーマの説明
+Theme URI: テーマの URL
+Author: 作った人の名前
+Author URI: 作った人の URL
+Version: 1.0
+License: ライセンス
+License URI: ライセンスの URL
+* * /
+/* 
+   ========================================================================== 
+   Author Edit
+   ==========================================================================
+* */
+
 /* この下に通常のcssを書いていく */
+body {
+	font-family: 'メイリオ', 'Hiragino kaku Gothic Pro', 'sans-serif';
+}
 header {
     width: inherit;
     background-image: url(./img/h_bg02.png);
