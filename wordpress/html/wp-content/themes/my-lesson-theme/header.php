@@ -20,16 +20,9 @@
 				<img src=<?php echo esc_url(get_theme_file_uri('img/logo.jpg')); ?> alt ="" />
 			</div>
 			<?php
-				// wp_nav_menu(array(
-				// 	'theme_location' => 'header-navi',
-				// 	'container_class' => 'head-menu',
-				// ));
-			?>
-			
-			<ul class="head-menu">
-				<li><a href=<?php echo esc_url(home_url('/')) ?>><p>ホーム</p><pre>HOME</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product01')) ?>><p>課題01</p><pre>SUBJECT01</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product02')) ?>><p>課題02</p><pre>SUBJECT02</pre></a></li>
-				<li><a href=<?php echo esc_url(home_url('/product03')) ?>><p>課題03</p><pre>SUBJECT03</pre></a></li>
-			</ul>
+				wp_nav_menu(array(
+					'theme_location' => 'header-navi',
+					'container_class' => 'head-menu',
+				));
+			?>			
 		</header>

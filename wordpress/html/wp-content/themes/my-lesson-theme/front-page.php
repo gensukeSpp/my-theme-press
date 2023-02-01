@@ -39,4 +39,5 @@ foreach($categories as $cat){ ?>
         ?>
     </section>
 <?php unset($cat); } ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

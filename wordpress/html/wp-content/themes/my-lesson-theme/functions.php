@@ -4,6 +4,12 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'wp-block-styles' );
         add_theme_support( 'responsive-embeds' );
+        // ヘッダーナビゲーション用
+        register_nav_menus(
+            array(
+                'header-navi' => 'ヘッダーナビゲーション'
+            )
+        );
     }
     add_action( 'after_setup_theme', 'custom_theme_setup' );
     function my_theme_scripts(){
@@ -16,8 +22,6 @@
         );
     }
     add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
-    // ヘッダーナビゲーション用
-    register_nav_menu('header-navi', 'ヘッダーナビゲーション');
 
     function custom_widget_register(){
         register_sidebar ( array(
@@ -32,4 +36,6 @@
     }
     add_action('widgets_init', 'custom_widget_register');
 
+    // リロード毎にSCSSファイルを強制コンパイルさせる
+    // define(‘WP_SCSS_ALWAYS_RECOMPILE’, true);
 ?>
